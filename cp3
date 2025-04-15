@@ -1,0 +1,125 @@
+1.      touch calculator.html calculator.js
+
+2.      <!DOCTYPE html>
+
+<html>
+
+<head><title>Calculator</title></head>
+
+<body>
+
+    <h2>Calculator</h2>
+
+    <input id="num1" type="number">
+
+    <input id="num2" type="number">
+
+    <button onclick="calculate('add')">+</button>
+
+    <button onclick="calculate('subtract')">−</button>
+
+    <button onclick="calculate('multiply')">×</button>
+
+    <button onclick="calculate('divide')">÷</button>
+
+    <p id="result"></p>
+
+    <script src="calculator.js"></script>
+
+</body>
+
+</html>
+
+3.      function calculate(operation)
+
+{
+
+    let num1 = parseFloat(document.getElementById("num1").value);
+
+    let num2 = parseFloat(document.getElementById("num2").value);
+
+    let result;
+
+ 
+
+    switch (operation) {
+
+        case "add":
+
+            result = num1 + num2;
+
+            break;
+
+        case "subtract":
+
+            result = num1 - num2;
+
+            break;
+
+        case "multiply":
+
+            result = num1 * num2;
+
+            break;
+
+        case "divide":
+
+            result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+
+            break;
+
+        default:
+
+            result = "Invalid operation";
+
+    }
+
+ 
+
+    document.getElementById("result").textContent = result;
+
+}
+
+ 
+
+ 
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+input {
+
+    width: 150px;
+
+    margin: 5px;
+
+}
+
+button {
+
+    margin: 5px;
+
+    padding: 5px;
+
+}
+
+ 
+
+// Copilot generated the basic arithmetic operations correctly using a switch statement.
+
+// I modified the divide function to prevent division by zero and added better error handling.
+
+ 
+
+git add calculator.html calculator.js style.css
+
+git commit -m "Added basic calculator with Copilot"
+
+git push origin main
