@@ -1,0 +1,45 @@
+touch factorial.py
+
+ 
+
+# Recursive function to calculate factorial
+
+ 
+
+def factorial(n):
+
+    if n < 0:
+
+        return "Factorial is not defined for negative numbers"
+
+    elif n == 0 or n == 1:
+
+        return 1
+
+    else:
+
+        return n * factorial(n - 1)
+
+ 
+
+print(factorial(5))  # Expected: 120
+
+print(factorial(0))  # Expected: 1
+
+print(factorial(-1)) # Expected: "Factorial is not defined for negative numbers"
+
+ 
+
+# Copilot correctly handled base cases (0 and 1) and negative numbers.
+
+# I adjusted the function to return an explicit error message for negative inputs.
+
+ 
+
+git add factorial.py
+
+git commit -m "Added recursive factorial function"
+
+git push origin main
+
+ 
